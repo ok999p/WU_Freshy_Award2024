@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Particle Animation</title>
+  <link rel="stylesheet" href="particle.css">
+</head>
+<body>
+  <div class="container" id="container">
+    <div class="container2">
+      <h2>WU Freshy Awards</h2>
+
+      <div class="voting-grid">
+          <div class="vote-option">
+              <img src="image1.jpg" alt="Candidate 1">
+              <p>Candidate 1</p>
+              <button>Vote</button>
+          </div>
+          <div class="vote-option">
+              <img src="image2.jpg" alt="Candidate 2">
+              <p>Candidate 2</p>
+              <button>Vote</button>
+          </div>
+      </div>
+  </div>
+  </div>
+  
+  <script>
+    const container = document.getElementById('container');
+    for (let i = 0; i < 200; i++) {
+      const circleContainer = document.createElement('div');
+      circleContainer.className = 'circle-container';
+      const circle = document.createElement('div');
+      circle.className = 'circle';
+      circleContainer.appendChild(circle);
+      container.appendChild(circleContainer);
+    }
+  </script>
+</body>
+</html>

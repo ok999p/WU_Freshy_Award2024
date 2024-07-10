@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle Animation</title>
+    <link rel="stylesheet" href="testF.css">
+</head>
+
+<body>
+    <div id="container" class="particle-container">
+        <div class="container2">
+            <div class="shine">HTML STUDING CLASS 2024</div>
+        </div>
+        <div class="container3">
+            <div class="sub-container">
+                <div class="header">
+                    <img src="https://www.mailmaster.co.th/public/upload/ckfinder/images/Apple-iPhone-15-lineup-color-lineup-geo-230912.jpg"
+                        alt="" class="image">
+                </div>
+                <div class="content">
+                    <h1>IPHONE 15 SERIES</h1>
+                    <div style="display: flex;">
+                        <div class="left-content" style="flex: 1; text-align: left;">
+                            <p>TACHANON SRISOOK<br>tachanon.srisook@gmail.com</p>
+                        </div>
+                        <div class="right-content" style="flex: 1; text-align: right;">
+                            <p>INVOICE NUMBER : #ok999p<br>INVOICE DATE : 20 OCTOBER 2024</p>
+                        </div>
+                    </div>
+                    <table style="width: 800px;">
+                        <tr style="background-color: rgb(194, 194, 194);">
+                            <th>IPHONE 15 SERIES</th>
+                            <th>RAM</th>
+                            <th>STORAGE</th>
+                            <th>PRICE</th>
+                        </tr>
+                        <tr>
+                            <th>IPHONE 15</th>
+                            <th>6</th>
+                            <th>128</th>
+                            <th>32,900฿</th>
+                        </tr>
+                        <tr>
+                            <th>IPHONE 15 PLUS</th>
+                            <th>6</th>
+                            <th>128</th>
+                            <th>37,900฿</th>
+                        </tr>
+                        <tr>
+                            <th>IPHONE 15 PRO</th>
+                            <th>8</th>
+                            <th>128</th>
+                            <th>41,900฿</th>
+                        </tr>
+                        <tr>
+                            <th>IPHONE 15 PRO MAX</th>
+                            <th>8</th>
+                            <th>256</th>
+                            <th>48,900฿</th>
+                        </tr>
+                    </table>
+                    <p style="text-align: right;">Total 161,600฿</p>
+                    <p>Payment to : Tachanon Srisook</p>
+                    <p>BSB : 123-456</p>
+                    <p>Account Number : 083-151-8888 </p>
+                    <p style="font-size: 60px;">THANK YOU!!! </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 Tachanon Srisook</p>
+    </footer>
+
+    <script>
+        const container = document.getElementById('container');
+        for (let i = 0; i < 200; i++) {
+            const circleContainer = document.createElement('div');
+            circleContainer.className = 'circle-container';
+            const circle = document.createElement('div');
+            circle.className = 'circle';
+            circleContainer.appendChild(circle);
+            container.appendChild(circleContainer);
+        }
+    </script>
+</body>
+
+
+</html>
