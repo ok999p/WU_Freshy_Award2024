@@ -2,7 +2,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ffffff;
-    color: white;
 }
 
 .container2 {
@@ -14,7 +13,7 @@ body {
 }
 
 .shine {
-    font-size: 4em;
+    font-size: 3.5em;
     font-weight: 900;
     color: rgba(255, 215, 0, 0.3);
     background: #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #FFD700)) 0 0 no-repeat;
@@ -22,6 +21,10 @@ body {
     -webkit-background-clip: text;
     -webkit-background-size: 200%;
     -webkit-animation: shineAnimation 5s infinite;
+}
+
+#Subtitle {
+    font-size: 1.5em;
 }
 
 @-webkit-keyframes shineAnimation {
@@ -46,6 +49,7 @@ body {
     transition: transform 300ms;
 }
 
+
 .card-container.single-card-view {
     grid-template-columns: 1fr;
     justify-content: center;
@@ -54,9 +58,9 @@ body {
 }
 
 .container.mt-5 {
-    background-color: rgb(144, 144, 144); /* ตัวอย่างการตั้งค่าสีพื้นหลัง */
-    padding: 20px; /* เพิ่มการเว้นระยะด้านใน */
-    border-radius: 10px; /* เพิ่มมุมโค้งให้กับกล่อง */
+    background-color: rgb(144, 144, 144); 
+    padding: 20px; 
+    border-radius: 10px; 
 }
 
 .card {
@@ -227,15 +231,23 @@ body {
 button {
     position: relative;
     padding: 12px 35px;
-    background: #fec195;
+    background: #0CFF00;
     font-size: 17px;
     font-weight: 500;
     color: #181818;
-    border: 3px solid #fec195;
+    border: 3px solid #0CFF00;
     border-radius: 8px;
-    box-shadow: 0 0 0 #fec1958c;
+    box-shadow: 0 0 0 #0CFF008c;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+  }
+
+
+  #Notvotting{
+    background: #ff0000;
+    border: 3px solid #ff0000;
+    box-shadow: 0 0 0 #ff00008c;
+
   }
   
   .star-1 {
@@ -305,11 +317,18 @@ button {
   }
   
   button:hover {
+    background-color: hsl(117, 100%, 50%, 0.5) ;
     background: transparent;
-    color: #fec195;
-    box-shadow: 0 0 25px #fec1958c;
+    color: #2bff00;
+    box-shadow: 0 0 25px #00ff00;
   }
   
+  #Notvotting:hover {
+    background: rgba(255, 0, 0, 0.1); /* สีแดงจาง */
+    color: #ff0000;
+    box-shadow: 0 0 25px #ff0000;
+}
+
   button:hover .star-1 {
     position: absolute;
     top: -80%;
