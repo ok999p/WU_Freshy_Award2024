@@ -49,7 +49,6 @@ body {
     transition: transform 300ms;
 }
 
-
 .card-container.single-card-view {
     grid-template-columns: 1fr;
     justify-content: center;
@@ -78,7 +77,6 @@ body {
     box-shadow: 0px 0px 10px 1px #000000ee;
     border-radius: 5px;
 }
-
 
 .front,
 .back {
@@ -118,7 +116,6 @@ body {
 #page3 .back::before {
     background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
 }
-
 
 .front .img {
     position: absolute;
@@ -217,7 +214,6 @@ body {
     box-shadow: 0px 0px 20px 5px #0CFF00;
 }
 
-
 #page2 .selected .content {
     transform: rotateY(180deg);
     box-shadow: 0px 0px 20px 5px #0CFF00;
@@ -240,17 +236,23 @@ button {
     box-shadow: 0 0 0 #0CFF008c;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
-  }
+}
+
+button.disabled-button {
+    background: #d3d3d3;
+    border: 3px solid #d3d3d3;
+    color: #808080;
+    cursor: not-allowed;
+}
 
 
-  #Notvotting{
+#Notvotting{
     background: #ff0000;
     border: 3px solid #ff0000;
     box-shadow: 0 0 0 #ff00008c;
+}
 
-  }
-  
-  .star-1 {
+.star-1 {
     position: absolute;
     top: 20%;
     left: 20%;
@@ -259,9 +261,9 @@ button {
     filter: drop-shadow(0 0 0 #fffdef);
     z-index: -5;
     transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
-  }
-  
-  .star-2 {
+}
+
+.star-2 {
     position: absolute;
     top: 45%;
     left: 45%;
@@ -270,9 +272,9 @@ button {
     filter: drop-shadow(0 0 0 #fffdef);
     z-index: -5;
     transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
-  }
-  
-  .star-3 {
+}
+
+.star-3 {
     position: absolute;
     top: 40%;
     left: 40%;
@@ -281,9 +283,9 @@ button {
     filter: drop-shadow(0 0 0 #fffdef);
     z-index: -5;
     transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
-  }
-  
-  .star-4 {
+}
+
+.star-4 {
     position: absolute;
     top: 20%;
     left: 40%;
@@ -292,9 +294,9 @@ button {
     filter: drop-shadow(0 0 0 #fffdef);
     z-index: -5;
     transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
-  }
-  
-  .star-5 {
+}
+
+.star-5 {
     position: absolute;
     top: 25%;
     left: 45%;
@@ -303,9 +305,9 @@ button {
     filter: drop-shadow(0 0 0 #fffdef);
     z-index: -5;
     transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
-  }
-  
-  .star-6 {
+}
+
+.star-6 {
     position: absolute;
     top: 5%;
     left: 50%;
@@ -314,22 +316,9 @@ button {
     filter: drop-shadow(0 0 0 #fffdef);
     z-index: -5;
     transition: all 0.8s ease;
-  }
-  
-  button:hover {
-    background-color: hsl(117, 100%, 50%, 0.5) ;
-    background: transparent;
-    color: #2bff00;
-    box-shadow: 0 0 25px #00ff00;
-  }
-  
-  #Notvotting:hover {
-    background: rgba(255, 0, 0, 0.1); /* สีแดงจาง */
-    color: #ff0000;
-    box-shadow: 0 0 25px #ff0000;
 }
 
-  button:hover .star-1 {
+button:hover .star-1 {
     position: absolute;
     top: -80%;
     left: -30%;
@@ -337,9 +326,9 @@ button {
     height: auto;
     filter: drop-shadow(0 0 10px #fffdef);
     z-index: 2;
-  }
-  
-  button:hover .star-2 {
+}
+
+button:hover .star-2 {
     position: absolute;
     top: -25%;
     left: 10%;
@@ -347,9 +336,9 @@ button {
     height: auto;
     filter: drop-shadow(0 0 10px #fffdef);
     z-index: 2;
-  }
-  
-  button:hover .star-3 {
+}
+
+button:hover .star-3 {
     position: absolute;
     top: 55%;
     left: 25%;
@@ -357,9 +346,9 @@ button {
     height: auto;
     filter: drop-shadow(0 0 10px #fffdef);
     z-index: 2;
-  }
-  
-  button:hover .star-4 {
+}
+
+button:hover .star-4 {
     position: absolute;
     top: 30%;
     left: 80%;
@@ -367,9 +356,9 @@ button {
     height: auto;
     filter: drop-shadow(0 0 10px #fffdef);
     z-index: 2;
-  }
-  
-  button:hover .star-5 {
+}
+
+button:hover .star-5 {
     position: absolute;
     top: 25%;
     left: 115%;
@@ -377,9 +366,9 @@ button {
     height: auto;
     filter: drop-shadow(0 0 10px #fffdef);
     z-index: 2;
-  }
-  
-  button:hover .star-6 {
+}
+
+button:hover .star-6 {
     position: absolute;
     top: 5%;
     left: 60%;
@@ -387,12 +376,50 @@ button {
     height: auto;
     filter: drop-shadow(0 0 10px #fffdef);
     z-index: 2;
-  }
-  
-  .fil0 {
+}
+
+button.hover-effect {
+    background-color: hsl(117, 100%, 50%, 0.5);
+    background: transparent;
+    color: #2bff00;
+    box-shadow: 0 0 25px #00ff00;
+}
+
+#Notvotting:hover {
+    background: rgba(255, 0, 0, 0.1); /* สีแดงจาง */
+    color: #ff0000;
+    box-shadow: 0 0 25px #ff0000;
+}
+
+button.disabled-button:hover {
+    background: #d3d3d3;
+    color: #808080;
+    box-shadow: none;
+}
+
+button.hover-effect:hover .star-1,
+button.hover-effect:hover .star-2,
+button.hover-effect:hover .star-3,
+button.hover-effect:hover .star-4,
+button.hover-effect:hover .star-5,
+button.hover-effect:hover .star-6 {
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+button.disabled-button .star-1,
+button.disabled-button .star-2,
+button.disabled-button .star-3,
+button.disabled-button .star-4,
+button.disabled-button .star-5,
+button.disabled-button .star-6 {
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+}
+
+.fil0 {
     fill: #fffdef;
-  }
-  
+}
 
 .content {
     flex: 1;
@@ -411,5 +438,3 @@ footer {
     font-weight: bold;
     margin-right: 5px;
 }
-
-

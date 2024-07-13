@@ -53,6 +53,13 @@
             color: #808080;
             box-shadow: none;
         }
+
+        .hover-effect:hover {
+            background-color: hsl(117, 100%, 50%, 0.5);
+            background: transparent;
+            color: #2bff00;
+            box-shadow: 0 0 25px #00ff00;
+        }
     </style>
 </head>
 
@@ -72,7 +79,7 @@
         <div class="content-page active-page" id="page1">
             <h2>ชาย</h2>
             <div class="card-container">
-                <div class="card" onclick="toggleCardSelection(this)">
+                <div class="card" onclick="toggleCardSelection(this, 'male')">
                     <div class="content">
                         <div class="back">
                             <div class="back-content">
@@ -115,7 +122,7 @@
                 </div>
             </div>
             <form action="" class="d-flex justify-content-center align-items-center gap-3 mt-5">
-                <button id="confirmButton" disabled class="disabled-button" onclick="confirmVote()">
+                <button id="confirmButtonMale" disabled class="disabled-button" onclick="confirmVote('male')">
                     ไม่สามารถโหวตได้
                     <div class="star-1">
                         <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
@@ -204,10 +211,268 @@
 
         <div class="content-page" id="page2">
             <h2>หญิง</h2>
+            <div class="card-container">
+                <div class="card" onclick="toggleCardSelection(this, 'female')">
+                    <div class="content">
+                        <div class="back">
+                            <div class="back-content">
+                                <img src="../image/Logo-WUFA.png" alt="Logo-WUFA" style="width: 300px;">
+                                <strong>WU FRESHY AWARD 2024</strong>
+                            </div>
+                        </div>
+                        <div class="front">
+                            <div class="img">
+                                <img src="../image/TestWUFA.jpg" alt="Spaghetti Bolognese">
+                            </div>
+                            <div class="front-content">
+                                <small class="badge">Pasta</small>
+                                <div class="description">
+                                    <div class="title">
+                                        <p class="title">
+                                            <strong>นายอัษฎาวุฒิ นาคทุ่งเตา</strong>
+                                        </p>
+                                        <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g style="mix-blend-mode: normal" text-anchor="none" font-size="none"
+                                                font-weight="none" font-family="none" stroke-dashoffset="0"
+                                                stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter"
+                                                stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero"
+                                                fill="#20c997">
+                                                <g transform="scale(8,8)">
+                                                    <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <p class="card-footer">
+                                        30 Mins &nbsp; | &nbsp; 1 Serving
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form action="" class="d-flex justify-content-center align-items-center gap-3 mt-5">
+                <button id="confirmButtonFemale" disabled class="disabled-button" onclick="confirmVote('female')">
+                    ไม่สามารถโหวตได้
+                    <div class="star-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                <path class="fil0"
+                                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="star-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                <path class="fil0"
+                                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="star-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                <path class="fil0"
+                                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="star-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                <path class="fil0"
+                                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="star-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                <path class="fil0"
+                                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="star-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                <path class="fil0"
+                                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                </button>
+                <button id="Notvotting" onclick="noVote()">
+                    ไม่ประสงค์จะลงคะแนน
+                </button>
+            </form>
         </div>
 
         <div class="content-page" id="page3">
             <h2>LGBTQ+</h2>
+            <div class="card-container">
+                <div class="card" onclick="toggleCardSelection(this, 'lgbtq')">
+                    <div class="content">
+                        <div class="back">
+                            <div class="back-content">
+                                <img src="../image/Logo-WUFA.png" alt="Logo-WUFA" style="width: 300px;">
+                                <strong>WU FRESHY AWARD 2024</strong>
+                            </div>
+                        </div>
+                        <div class="front">
+                            <div class="img">
+                                <img src="../image/TestWUFA.jpg" alt="Spaghetti Bolognese">
+                            </div>
+                            <div class="front-content">
+                                <small class="badge">Pasta</small>
+                                <div class="description">
+                                    <div class="title">
+                                        <p class="title">
+                                            <strong>นายอัษฎาวุฒิ นาคทุ่งเตา</strong>
+                                        </p>
+                                        <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g style="mix-blend-mode: normal" text-anchor="none" font-size="none"
+                                                font-weight="none" font-family="none" stroke-dashoffset="0"
+                                                stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter"
+                                                stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero"
+                                                fill="#20c997">
+                                                <g transform="scale(8,8)">
+                                                    <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <p class="card-footer">
+                                        30 Mins &nbsp; | &nbsp; 1 Serving
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form action="" class="d-flex justify-content-center align-items-center gap-3 mt-5">
+                <button id="confirmButtonLGBTQ" disabled class="disabled-button" onclick="confirmVote('lgbtq')">
+                    ไม่สามารถโหวตได้
+                    <div class="star-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                <path class="fil0"
+                                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="star-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                <path class="fil0"
+                                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="star-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                <path class="fil0"
+                                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="star-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                <path class="fil0"
+                                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="star-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                <path class="fil0"
+                                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="star-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                            viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <g id="Layer_x0020_1">
+                                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                <path class="fil0"
+                                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                </button>
+                <button id="Notvotting" onclick="noVote()">
+                    ไม่ประสงค์จะลงคะแนน
+                </button>
+            </form>
         </div>
     </div>
     <footer id="footer-credit">
@@ -216,72 +481,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <script>
-        function toggleCardSelection(card) {
-            const selectedCards = document.querySelectorAll('.card.selected');
-            if (selectedCards.length >= 1 && !card.classList.contains('selected')) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'ไม่สามารถโหวตได้',
-                    text: 'สามารถโหวตได้แค่ 1 ท่านเท่านั้น'
-                });
-                return;
-            }
-            card.classList.toggle('selected');
-            updateConfirmButtonState();
-        }
-
-        function updateConfirmButtonState() {
-            const selectedCards = document.querySelectorAll('.card.selected');
-            const confirmButton = document.getElementById('confirmButton');
-            if (selectedCards.length === 0) {
-                confirmButton.disabled = true;
-                confirmButton.classList.add('disabled-button');
-                confirmButton.textContent = 'ไม่สามารถโหวตได้';
-            } else {
-                confirmButton.disabled = false;
-                confirmButton.classList.remove('disabled-button');
-                confirmButton.textContent = 'ยืนยันการเลือกนี้';
-            }
-        }
-
-        function showPage(pageNumber) {
-            var pages = document.querySelectorAll('.content-page');
-            pages.forEach(function (page) {
-                page.classList.remove('active-page');
-            });
-            document.getElementById('page' + pageNumber).classList.add('active-page');
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            updateConfirmButtonState();
-        });
-
-        function confirmVote() {
-            const confirmButton = document.getElementById('confirmButton');
-            if (!confirmButton.disabled) {
-                const selectedCard = document.querySelector('.card.selected .title p').textContent.trim();
-                Swal.fire({
-                    title: 'ยืนยันการโหวต',
-                    text: `คุณได้เลือก ${selectedCard}`,
-                    icon: 'success',
-                    confirmButtonText: 'ตกลง',
-                });
-            }
-        }
-
-        function noVote() {
-            Swal.fire({
-                title: 'ยืนยันการไม่โหวต',
-                text: 'คุณไม่ประสงค์จะลงคะแนน',
-                icon: 'warning',
-                confirmButtonText: 'ตกลง'
-            });
-        }
-    </script>
+    <script src="../js/vote.js"></script>
 </body>
 
 </html>
