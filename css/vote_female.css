@@ -14,6 +14,17 @@ body {
     margin-bottom: 20px;
 }
 
+.imglogo2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imglogo2 img {
+    max-width: 250px;
+    height: auto;
+}
+
 .shine {
     font-size: 3.5em;
     font-weight: 900;
@@ -39,14 +50,7 @@ body {
     }
 }
 
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-    transition: transform 300ms;
-}
-
-h2 {
+.glow {
     font-family: 'Kanit', sans-serif;
     font-size: 3rem;
     color: #d98ad9;
@@ -54,17 +58,18 @@ h2 {
     animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    margin: 0;
+    margin-bottom: 20px;
+    margin-top: 0px;
     padding: 0;
 }
 
 @keyframes glow {
     from {
-        text-shadow:  0px 0px 5px #FF00FF;
+        text-shadow: 0px 0px 5px #FF00FF;
     }
 
     to {
-        text-shadow:  0px 0px 20px #FF00FF;
+        text-shadow: 0px 0px 20px #FF00FF;
     }
 }
 
@@ -88,11 +93,30 @@ h2 {
     margin-top: 20px;
 }
 
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.Logo-WUFA {
+    width: 200px;
+}
+
 .card {
-    overflow: visible;
-    width: 300px;
-    height: 300px;
+    aspect-ratio: 1;
+    background-color: #151515;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 1px #000000ee;
+    overflow: hidden;
     cursor: pointer;
+    position: relative;
+    transition: transform 300ms, box-shadow 300ms;
+}
+
+.card.selected {
+    box-shadow: 0px 0px 20px 5px #0CFF00;
 }
 
 .content {
@@ -100,7 +124,6 @@ h2 {
     height: 100%;
     transform-style: preserve-3d;
     transition: transform 300ms;
-    box-shadow: 0px 0px 10px 1px #000000ee;
     border-radius: 5px;
 }
 
@@ -117,8 +140,6 @@ h2 {
 }
 
 .back {
-    width: 100%;
-    height: 100%;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -129,7 +150,7 @@ h2 {
     position: absolute;
     content: ' ';
     display: block;
-    width: 260px;
+    width: 360px;
     height: 160%;
     background: linear-gradient(90deg, transparent, #FF00FF, #FF00FF, #FF00FF, #FF00FF, transparent);
     animation: rotation_481 5000ms infinite linear;
@@ -230,7 +251,6 @@ h2 {
 
 .selected .content {
     transform: rotateY(180deg);
-    box-shadow: 0px 0px 20px 5px #0CFF00;
 }
 
 button {
@@ -286,10 +306,6 @@ button.disabled-button:hover {
     box-shadow: 0 0 25px #ff0000;
 }
 
-.content {
-    flex: 1;
-}
-
 footer {
     background-color: #151515;
     padding: 10px 0;
@@ -304,35 +320,57 @@ footer {
     margin-right: 5px;
 }
 
-/* CSS for screens with max-width of 768px */
-@media (max-width: 768px) {
+@media (max-width: 1224px) {
     .shine {
-        font-size: 2.5em;
+        font-size: 3em;
     }
 
     .container {
         width: 90%;
     }
+}
 
+@media (max-width: 768px) {
     .card-container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
     }
 
-    .card {
-        width: 200px;
-        height: 200px;
+    .shine {
+        font-size: 2.5em;
     }
 
-    h2 {
+    .glow {
         font-size: 2.5rem;
+    }
+
+    .container {
+        width: 90%;
     }
 }
 
-/* CSS for screens with max-width of 480px */
 @media (max-width: 480px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
     .shine {
-        font-size: 2em;
+        font-size: 30px;
+    }
+
+    #Subtitle {
+        font-size: 19px;
+    }
+
+    .glow {
+        font-size: 1.7rem;
+    }
+
+    .Logo-WUFA {
+        width: 150px;
+    }
+
+    .imglogo2 img {
+        width: 150px;
     }
 
     .container {
@@ -340,20 +378,17 @@ footer {
         padding: 10px;
     }
 
-    .card-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .card {
-        width: 100%;
-        min-width: 100px; /* กำหนดความกว้างขั้นต่ำของการ์ด */
-        height: auto;
-        min-height: 200px; /* กำหนดความสูงขั้นต่ำของการ์ด */
-    }
-
     h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .img {
+        max-width: 100%;
+        height: 100%;
+    }
+
+    .card-container {
+        width: 80%;
     }
 
     button {
@@ -364,10 +399,26 @@ footer {
 }
 
 
-/* CSS for screens with max-width of 376px */
+
 @media (max-width: 376px) {
     .shine {
-        font-size: 1.5em;
+        font-size: 28px;
+    }
+    
+    #Subtitle {
+        font-size: 19px;
+    }
+    .glow {
+        font-size: 1.7rem;
+    }
+
+    .Logo-WUFA {
+        width: 150px;
+    }
+
+    .imglogo2 img {
+        width: 150px;
+        
     }
 
     .container {
@@ -375,18 +426,17 @@ footer {
         padding: 5px;
     }
 
-    .card-container {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .card {
-        width: 100%;
-        height: auto;
-    }
-
     h2 {
         font-size: 1.5rem;
+    }
+
+    .img {
+        max-width: 100%;
+        height: 100%;
+    }
+
+    .card-container {
+        width: 70%;
     }
 
     button {

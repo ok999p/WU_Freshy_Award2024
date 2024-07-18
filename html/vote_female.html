@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/vote_female.css">
+    <link rel="icon" href="../image/Logo-WUFA.png">
+    <link href="https://db.onlinewebfonts.com/c/e695a2b548e145591a266fc50eb492e0?family=Regular" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css" rel="stylesheet">
+    <title>Vote WUFAS 2024</title>
+</head>
+
+<body>
+    <div class="imglogo2">
+        <img src="../image/01@4x.png" alt="Photo Logo2_WUFA">
+    </div>
+    <div class="container2">
+        <div class="shine">WU FRESHY AWARD 2024</div>
+        <div class="shine" id="Subtitle">POPULAR VOTE</div>
+    </div>
+    <div class="container">
+        <h2 class="glow">GRIL CANDIDATE</h2>
+        <div class="card-container">
+            <div class="card" onclick="toggleCardSelection(this, 'female')">
+                <div class="content">
+                    <div class="back">
+                        <div class="back-content">
+                            <img src="../image/Logo-WUFA.png" alt="Logo-WUFA" class="Logo-WUFA">
+                            <strong>M01</strong>
+                            <strong>นายอัษฎาวุฒิ นาคทุ่งเตา</strong>
+                        </div>
+                    </div>
+                    <div class="front">
+                        <div class="img">
+                            <img src="../image/Logo_test.jpg" alt="Spaghetti Bolognese">
+                        </div>
+                        <div class="front-content">
+                            <strong class="badge">1</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleCardSelection(this, 'female')">
+                <div class="content">
+                    <div class="back">
+                        <div class="back-content">
+                            <img src="../image/Logo-WUFA.png" alt="Logo-WUFA" class="Logo-WUFA">
+                            <strong>M01</strong>
+                            <strong>นายอัษฎาวุฒิ นาคทุ่งเตา</strong>
+                        </div>
+                    </div>
+                    <div class="front">
+                        <div class="img">
+                            <img src="../image/Logo_test.jpg" alt="Spaghetti Bolognese">
+                        </div>
+                        <div class="front-content">
+                            <strong class="badge">1</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleCardSelection(this, 'female')">
+                <div class="content">
+                    <div class="back">
+                        <div class="back-content">
+                            <img src="../image/Logo-WUFA.png" alt="Logo-WUFA" class="Logo-WUFA">
+                            <strong>M01</strong>
+                            <strong>นายอัษฎาวุฒิ นาคทุ่งเตา</strong>
+                        </div>
+                    </div>
+                    <div class="front">
+                        <div class="img">
+                            <img src="../image/Logo_test.jpg" alt="Spaghetti Bolognese">
+                        </div>
+                        <div class="front-content">
+                            <strong class="badge">1</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form action="" class="vote-form">
+            <button id="confirmButtonFemale" disabled class="disabled-button" onclick="confirmVote(event, 'female')">
+                ไม่สามารถโหวตได้
+            </button>
+            <button type="button" id="Notvotting" onclick="noVote(event)">
+                ไม่ประสงค์จะลงคะแนน
+            </button>
+        </form>
+    </div>
+    <footer id="footer-credit">
+        <p id="footer-text">Copyright ©️ 2024 Teams IT SAB</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/vote.js"></script>
+</body>
+
+</html>
